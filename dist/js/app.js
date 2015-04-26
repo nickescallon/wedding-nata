@@ -1,0 +1,2 @@
+!function(){var n=["ui.router"];angular.module("nataWedding",n)}();!function(){function n(n){n.state("app",{url:"/"})}angular.module("nataWedding").config(n);n.$inject=["$stateProvider"]}();
+//# sourceMappingURL=app.js.map

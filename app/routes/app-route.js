@@ -1,8 +1,9 @@
 (function() {
   angular.module('nataWedding').config(AppRoute);
 
-  function AppRoute() {
-    this.$stateProvider
+  AppRoute.$inject = ['$stateProvider'];
+  function AppRoute($stateProvider) {
+    $stateProvider
     .state('app', {
       url: '/'
     });
