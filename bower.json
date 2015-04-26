@@ -2,7 +2,9 @@
   "name": "wedding-nata",
   "version": "0.0.1",
   "homepage": "https://github.com/nickescallon/wedding-nata",
-  "authors": ["Nick Escallon"],
+  "authors": [
+    "Nick Escallon"
+  ],
   "description": "A Wedding Site",
   "main": "index.html",
   "private": true,
@@ -14,6 +16,7 @@
   "dependencies": {
     "angular": "~1.3.9",
     "angular-ui-router": "0.2.13",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "normalize.css": "~3.0.3"
   }
 }

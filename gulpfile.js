@@ -35,9 +35,9 @@ var destinations = {
 /* JAVASCRIPTS */
 
 // concat and minify vendor js
-var jsFilter = gulpFilter('*.js');
-
 gulp.task('vendorJs', function() {
+  var jsFilter = gulpFilter('*.js');
+
   gulp.src(mainBowerFiles())
   .pipe(jsFilter)
   .pipe(sourcemaps.init())
@@ -61,6 +61,16 @@ gulp.task('appJs', function() {
 });
 
 /* STYLES */
+
+gulp.task('vendorStyles', function() {
+  var cssFilter = gulpFilter('*.css');
+
+  gulp.src(mainBowerFiles())
+  .pipe(cssFilter)
+  .pipe(concat('vendor.css'))
+  .pipe(gulp.dest(destinations.css));
+
+});
 
 // concat and compress application css
 gulp.task('appStyles', function() {
@@ -109,6 +119,7 @@ gulp.task('build', [
   'vendorJs',
   'appJs',
   'templates',
+  'vendorStyles',
   'appStyles',
   'images',
   'index'
@@ -122,7 +133,7 @@ gulp.task('watch', function() {
   gulp.watch(sources.images, ['images']);
   gulp.watch(sources.index, ['index']);
   gulp.watch(sources.templates, ['templates']);
-  gulp.watch('./bower.json', ['vendorJs']);
+  gulp.watch('./bower.json', ['vendorJs', 'vendorStyles']);
 });
 
 //default
