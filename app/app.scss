@@ -1,3 +1,5 @@
+$height-header: 50px;
+
 html {
   font-size: 10px;
   color: #242429;
@@ -7,7 +9,7 @@ html {
 .container {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1000px;
+  // max-width: 1000px;
 }
 
 .flex-col {
@@ -99,20 +101,34 @@ html {
 
 header {
   position: fixed;
-  height: 50px;
+  height: $height-header;
   width: 100%;
-  background: blue;
+  background: black;
   color: white;
 }
 
 .main {
   position: absolute;
-  top: 50px;
+  top: $height-header;
   left: 0;
   right: 0;
   bottom: 0;
-  background: red;
+  // background: red;
 }
+
+.content {
+  height: 300px;
+  border: 1px solid black;
+}
+
+.landing {
+  background: url(../images/landing.jpg) no-repeat center center fixed;
+  // Load a mobile friendly img on a breakpoint
+  z-index: -2;
+  background-size: cover;
+  height: 2000px;
+}
+
 
 
 
