@@ -1,0 +1,173 @@
+html {
+  font-size: 10px;
+  color: #242429; }
+
+/*CONTAINERS*/
+.container {
+  margin-right: auto;
+  margin-left: auto; }
+
+.flex-col {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row; }
+
+/*ITEMS*/
+.item-1 {
+  flex: 1; }
+
+.item-2 {
+  flex: 2; }
+
+.item-3 {
+  flex: 3; }
+
+.item-4 {
+  flex: 4; }
+
+/*JUSTIFY CHILDREN*/
+.justify-start {
+  justify-content: flex-start; }
+
+.justify-center {
+  justify-content: center; }
+
+.justify-end {
+  justify-content: flex-end; }
+
+.justify-around {
+  justify-content: space-around; }
+
+.justify-between {
+  justify-content: space-between; }
+
+/*ALIGN CHILDREN*/
+.align-start {
+  align-items: flex-start; }
+
+.align-center {
+  align-items: center; }
+
+.align-end {
+  align-items: flex-end; }
+
+.align-stretch {
+  align-items: stretch; }
+
+.align-baseline {
+  align-items: baseline; }
+
+/*ALIGN SELF*/
+.self-start {
+  align-self: flex-start; }
+
+.self-end {
+  align-self: flex-end; }
+
+/*BEHAVIOR*/
+.y-scroll {
+  overflow-y: scroll; }
+
+.x-hidden {
+  overflow-x: hidden; }
+
+/*FONT SIZES*/
+.f1 {
+  font-size: 1rem; }
+
+.f1-5 {
+  font-size: 1.5rem; }
+
+.f2 {
+  font-size: 2rem; }
+
+.f2-5 {
+  font-size: 2.5rem; }
+
+.f3 {
+  font-size: 3rem; }
+
+.f3-5 {
+  font-size: 3.5rem; }
+
+.f4 {
+  font-size: 4rem; }
+
+.f4-5 {
+  font-size: 4.5rem; }
+
+/*FONT COLORS*/
+.fc-light {
+  color: #f2f2f3; }
+
+.fc-dark {
+  color: #242429; }
+
+.bold {
+  font-weight: bold; }
+
+.fw-light {
+  font-weight: 100; }
+
+/* SIZING */
+.height-full {
+  height: 100%; }
+
+.width-full {
+  width: 100%; }
+
+.margin-top {
+  margin-top: 5px; }
+
+.margin-bottom {
+  margin-bottom: 5px; }
+
+.margin-xs {
+  margin: 1px; }
+
+.padding-sides {
+  padding: 0px 5px; }
+
+.hidden {
+  display: none; }
+
+.v-center {
+  display: flex;
+  align-items: center; }
+
+.h-center {
+  display: flex;
+  justify-content: center; }
+
+.wrap {
+  word-wrap: break-word; }
+
+header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background: black;
+  color: white; }
+
+.main {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+.content {
+  height: 300px;
+  border: 1px solid black; }
+
+.landing {
+  background: url(../images/landing.jpg) no-repeat center center fixed;
+  z-index: -2;
+  background-size: cover;
+  height: 2000px; }
