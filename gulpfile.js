@@ -19,7 +19,7 @@ var sources = {
     js: ['./app/**/*.js'],
     sass: ['./app/**/*.scss']
   },
-  images: ['./assets/images/**/*.*'],
+  images: ['./app/img/**/*.*'],
   fonts: ['./assets/fonts/**/*.*'],
   index: ['./app/index.html'],
   templates: ['./app/**/*.html', '!./app/index.html']
