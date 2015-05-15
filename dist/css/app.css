@@ -2,10 +2,15 @@ html {
   font-size: 10px;
   color: #242429; }
 
+body {
+  background: url(http://www.chenillekraft.com/site_media/product_photos/8720b.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
 /*CONTAINERS*/
 .container {
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  max-width: 1000px; }
 
 .flex-col {
   position: relative;
@@ -155,11 +160,9 @@ header {
   color: white; }
 
 .main {
-  position: absolute;
+  position: relative;
   top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  background: url(../images/nobel_white_detail.jpg) center center;
   z-index: -1; }
 
 .content {
@@ -167,7 +170,14 @@ header {
   border: 1px solid black; }
 
 .landing {
-  background: url(../images/landing.jpg) no-repeat center center fixed;
-  z-index: -2;
-  background-size: cover;
-  height: 2000px; }
+  position: relative;
+  background: url(../images/one_heart.png) no-repeat center center;
+  height: 1500px; }
+
+.text {
+  position: absolute;
+  top: 300px;
+  left: 150px; }
+
+.big {
+  width: 100%; }
