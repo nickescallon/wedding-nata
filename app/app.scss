@@ -112,13 +112,14 @@ header {
   width: 100%;
   background: black;
   color: white;
+  z-index: 999;
 }
 
 .main {
   position: relative;
   top: $height-header;
   background: url(../images/nobel_white_detail.jpg) center center;
-  z-index: -1;
+  // z-index: -1;
   // background-size: cover;
 }
 
@@ -130,11 +131,11 @@ header {
 .landing {
   position: relative;
   // background: url(http://static9.depositphotos.com/1097818/1199/i/950/depositphotos_11991636-light-linen-texture-for-the-background.jpg) no-repeat center center fixed;
-  background: url(../images/one_heart.png) no-repeat center center;
+  // background: url(../images/one_heart.png) no-repeat center center;
   // Load a mobile friendly img on a breakpoint
   // z-index: -2;
   // background-size: cover;
-  height: 1500px;
+  // height: 1500px;
 }
 
 .text {
@@ -146,6 +147,35 @@ header {
 .big {
   width: 100%;
 }
+
+.text-image {
+  position: relative;
+  width: 60%;
+}
+
+.caption-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  font-size: 24px; // reduce on media queries
+
+}
+
+.caption-left {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+.caption-right {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+}
+
+
 
 
 

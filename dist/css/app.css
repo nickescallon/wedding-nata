@@ -157,22 +157,20 @@ header {
   height: 50px;
   width: 100%;
   background: black;
-  color: white; }
+  color: white;
+  z-index: 999; }
 
 .main {
   position: relative;
   top: 50px;
-  background: url(../images/nobel_white_detail.jpg) center center;
-  z-index: -1; }
+  background: url(../images/nobel_white_detail.jpg) center center; }
 
 .content {
   height: 300px;
   border: 1px solid black; }
 
 .landing {
-  position: relative;
-  background: url(../images/one_heart.png) no-repeat center center;
-  height: 1500px; }
+  position: relative; }
 
 .text {
   position: absolute;
@@ -181,3 +179,25 @@ header {
 
 .big {
   width: 100%; }
+
+.text-image {
+  position: relative;
+  width: 60%; }
+
+.caption-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 24px; }
+
+.caption-left {
+  position: absolute;
+  top: 5%;
+  left: 10%; }
+
+.caption-right {
+  position: absolute;
+  top: 5%;
+  right: 10%; }
