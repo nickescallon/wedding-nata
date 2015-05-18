@@ -41,7 +41,10 @@
               <div class="caption-right">
                 Michael
               </div>
+            </div>
 
+            <div class="bottom">
+              With Love - Con Much Cariño - مع الحب
             </div>
           </div>
           <!-- content row 1 -->
@@ -79,6 +82,8 @@
     (function() {
       var elems = {
         body: $('body'),
+        main: $('.main'),
+        landing: $('.landing'),
         details: $('#details'),
         nav: {
           details: $('#link-details')
@@ -98,9 +103,8 @@
       elems.nav.details.on( 'click', scrollTo.bind(elems.details) );
 
       function scrollTo() {
-        var targetTop = this.offset().top - 50;
-        console.log(targetTop);
-        elems.body.animate({scrollTop: targetTop}, 750);
+        var targetTop = 0 - elems.landing.offset().top + this.offset().top;
+        elems.main.animate({scrollTop: targetTop}, 750);
       }
 
     })();

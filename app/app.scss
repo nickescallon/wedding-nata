@@ -1,4 +1,5 @@
 $height-header: 50px;
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 html {
   font-size: 10px;
@@ -14,9 +15,9 @@ body {
 
 /*CONTAINERS*/
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1000px;
+  // margin-right: auto;
+  // margin-left: auto;
+  // max-width: 1000px;
 }
 
 .flex-col {
@@ -116,11 +117,16 @@ header {
 }
 
 .main {
-  position: relative;
+  position: fixed;
   top: $height-header;
-  background: url(../images/nobel_white_detail.jpg) center center;
+  background: url(../images/nobel_white_detail_small.jpg) center center;
   // z-index: -1;
-  // background-size: cover;
+  background-size: cover;
+  overflow-y: scroll;
+  height: 100%;
+
+  left: 0;
+  right: 0;
 }
 
 .content {
@@ -150,7 +156,11 @@ header {
 
 .text-image {
   position: relative;
-  width: 60%;
+  width: 80%;
+  font-size: 24px; // reduce on media queries
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  color: #113A3F; // matches the skyline image
 }
 
 .caption-container {
@@ -159,21 +169,92 @@ header {
   left: 0;
   bottom:0;
   right: 0;
-  font-size: 24px; // reduce on media queries
-
 }
 
 .caption-left {
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 10%;
 }
 
 .caption-right {
   position: absolute;
-  top: 5%;
+  top: 2%;
   right: 10%;
 }
+
+.bottom {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+
+  font-size: 18px;
+  text-align: center;
+}
+
+// media queries
+@media only screen and (min-width : 500px) {
+  .caption-container {
+    font-size: 48px;
+  }
+
+  .text-image {
+    width: 65%;
+  }
+
+  .caption-left {
+    top: 0;
+    left: 0;
+  }
+
+  .caption-right {
+    top: 0;
+    right: 0;
+  }
+
+  .bottom {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width : 850px) {
+  .caption-container {
+    font-size: 48px;
+  }
+
+  .main {
+    left: 10%;
+    right: 10%;
+  }
+
+  .text-image {
+    width: 50%;
+  }
+
+  .bottom {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width : 1150px) {
+  .caption-container {
+    font-size: 48px;
+  }
+
+  .main {
+    left: 15%;
+    right: 15%;
+  }
+
+  .text-image {
+    width: 40%;
+  }
+
+  .bottom {
+    font-size: 20px;
+  }
+}
+
 
 
 
