@@ -1,15 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 html {
-  font-size: 10px;
-  color: #242429; }
+  font-size: 14px;
+  font-family: 'Indie Flower', cursive;
+  color: #113A3F;
+  height: 100%; }
 
 body {
-  background: url(http://www.chenillekraft.com/site_media/product_photos/8720b.jpg) no-repeat center center fixed;
+  background: url(../images/paper.jpg) center center fixed;
   background-size: cover; }
+
+a {
+  color: white; }
 
 /*CONTAINERS*/
 .flex-col {
-  position: relative;
   display: flex;
   flex-direction: column; }
 
@@ -151,100 +155,57 @@ body {
 header {
   position: fixed;
   height: 50px;
-  width: 100%;
+  left: 0;
+  right: 0;
   background: black;
   color: white;
-  z-index: 999; }
+  z-index: 999;
+  opacity: .7; }
 
-.main {
-  position: fixed;
-  top: 50px;
-  background: url(../images/nobel_white_detail_small.jpg) center center;
-  background-size: cover;
-  overflow-y: scroll;
+.max-width {
+  max-width: 1000px; }
+
+.container-main {
   height: 100%;
-  left: 0;
-  right: 0; }
+  margin-left: auto;
+  margin-right: auto; }
+
+.container-image {
+  position: relative;
+  font-size: 36px; }
+  .container-image > img {
+    width: 300px; }
+  .container-image > .caption-left {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .container-image > .caption-right {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .container-image > .footer {
+    height: 50px;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center; }
+
+.container-content {
+  position: relative;
+  top: 50px;
+  height: 100%; }
 
 .content {
+  position: relative;
   height: 300px;
   border: 1px solid black; }
 
-.landing {
+#landing {
   position: relative; }
-
-.text {
-  position: absolute;
-  top: 300px;
-  left: 150px; }
-
-.big {
-  width: 100%; }
-
-.text-image {
-  position: relative;
-  width: 80%;
-  font-size: 24px;
-  font-family: 'Indie Flower', cursive;
-  font-weight: bold;
-  color: #113A3F; }
-
-.caption-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-
-.caption-left {
-  position: absolute;
-  top: 2%;
-  left: 10%; }
-
-.caption-right {
-  position: absolute;
-  top: 2%;
-  right: 10%; }
-
-.bottom {
-  width: 100%;
-  height: 50px;
-  padding: 5px;
-  font-size: 18px;
-  text-align: center; }
-
-@media only screen and (min-width: 500px) {
-  .caption-container {
-    font-size: 48px; }
-  .text-image {
-    width: 65%; }
-  .caption-left {
-    top: 0;
-    left: 0; }
-  .caption-right {
-    top: 0;
-    right: 0; }
-  .bottom {
-    font-size: 20px; } }
-
-@media only screen and (min-width: 850px) {
-  .caption-container {
-    font-size: 48px; }
-  .main {
-    left: 10%;
-    right: 10%; }
-  .text-image {
-    width: 50%; }
-  .bottom {
-    font-size: 20px; } }
-
-@media only screen and (min-width: 1150px) {
-  .caption-container {
-    font-size: 48px; }
-  .main {
-    left: 15%;
-    right: 15%; }
-  .text-image {
-    width: 40%; }
-  .bottom {
-    font-size: 20px; } }
+  #landing > .bottom-left {
+    position: absolute;
+    left: 2%;
+    bottom: 1%; }
+  #landing > .bottom-right {
+    position: absolute;
+    right: 2%;
+    bottom: 1%; }

@@ -1,113 +1,57 @@
 <!DOCTYPE html>
 <meta charset="UTF8">
-<html data-ng-app="nataWedding">
-<head>
-  <base href="/">
-  <link rel="stylesheet" type="text/css" href="/css/vendor.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
-</head>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
+  </head>
+
   <body>
-
-  <header>
-    <div class="container height-full">
+    <header class="max-width">
       <div class="flex-row height-full">
-        <div class="item-1 v-center h-center">
-          <a>Nav Link 1</a>
+        <div id="link-our-wedding" class="item-1 v-center h-center">
+          <a href="javascript:;">Our Wedding</a>
         </div>
-        <div class="item-1 v-center h-center">
-          <a>Nav Link 2</a>
+        <div id="link-our-story" class="item-1 v-center h-center">
+          <a href="javascript:;">Our Story</a>
         </div>
-        <div class="item-1 v-center h-center">
-          <a>Nav Link 3</a>
+        <div id="link-accommodations" class="item-1 v-center h-center">
+          <a href="javascript:;">Accommodations</a>
         </div>
-        <div id="link-details" class="item-1 v-center h-center">
-          <a>Nav Link 4</a>
+        <div id="link-registry" class="item-1 v-center h-center">
+          <a href="javascript:;">Registry</a>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="main container">
-    <div class="container">
-      <div class="flex-col">
-        <div class="content landing v-center h-center">
-          <div class="text-image">
-            <img class="big" src="../images/one_heart.png"/>
-            <div class="caption-container">
-              <div class="caption-left">
-                Natalia
-              </div>
+    <div class="container-main max-width">
+      <div class="flex-col container-content">
 
-              <div class="caption-right">
-                Michael
-              </div>
-            </div>
+        <div id="landing" class="v-center h-center">
 
-            <div class="bottom">
-              With Love - Con Much Cariño - مع الحب
-            </div>
+          <div class="container-image">
+            <img src="../images/one_heart.png">
+            <div class="caption-left">Natalia</div>
+            <div class="caption-right">Michael</div>
+            <div class="footer">With Love - Con Much Cariño - مع الحب</div>
           </div>
-          <!-- content row 1 -->
+
+          <div class="bottom-left">October 10th, 2015</div>
+          <div class="bottom-right">Intercontinental Hotel - Boston, MA</div>
+
         </div>
 
-        <div id="details" class="content v-center h-center">
-          content row 2
-        </div>
-
-        <div class="content v-center h-center">
-          content row 3
-          <!-- <img class="big" src="../images/one_heart.png"/> -->
-        </div>
-
-        <div class="content v-center h-center">
-          content row 4
-        </div>
-
-        <div class="content v-center h-center">
-          content row 5
-        </div>
+        <div id="our-wedding" class="content">Our Wedding</div>
+        <div id="our-story" class="content">Our Story</div>
+        <div id="accommodations" class="content">Accommodations</div>
+        <div id="registry" class="content">Registry</div>
 
 
       </div>
     </div>
-  </div>
 
-  <footer>
-  </footer>
-
-    <!-- global javascript -->
     <script type="text/javascript" src="/js/vendor.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
-    <script>
-    (function() {
-      var elems = {
-        body: $('body'),
-        main: $('.main'),
-        landing: $('.landing'),
-        details: $('#details'),
-        nav: {
-          details: $('#link-details')
-        }
-      };
 
-      resizeLandingPage();
-      window.onresize = resizeLandingPage;
-
-      function resizeLandingPage() {
-        var landingPageHeight = (window.innerHeight - 50) + 'px';
-        var landingPageElem = document.getElementsByClassName('landing')[0];
-
-        landingPageElem.style.height = landingPageHeight;
-      }
-
-      elems.nav.details.on( 'click', scrollTo.bind(elems.details) );
-
-      function scrollTo() {
-        var targetTop = 0 - elems.landing.offset().top + this.offset().top;
-        elems.main.animate({scrollTop: targetTop}, 750);
-      }
-
-    })();
-    </script>
   </body>
 </html>
