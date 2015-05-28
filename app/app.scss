@@ -135,10 +135,6 @@ header {
   position: relative;
   font-size: 36px;
 
-  > img {
-    width: 300px;
-  }
-
   > .caption-left {
     position: absolute;
     left: 0;
@@ -155,7 +151,7 @@ header {
     height: 50px;
     padding: 5px;
 
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
 }

@@ -1,6 +1,6 @@
 (function() {
   var elems = {
-    header: $('header'),
+    header: $('header').find('div.max-width'),
     body: $('body'),
     main: $('.container-main'),
     landing: $('#landing'),

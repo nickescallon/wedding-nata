@@ -173,8 +173,6 @@ header {
 .container-image {
   position: relative;
   font-size: 36px; }
-  .container-image > img {
-    width: 300px; }
   .container-image > .caption-left {
     position: absolute;
     left: 0;
@@ -186,7 +184,7 @@ header {
   .container-image > .footer {
     height: 50px;
     padding: 5px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center; }
 
 .container-content {
