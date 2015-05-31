@@ -1,11 +1,14 @@
-var connectLivereload = require('connect-livereload');
-var express = require('express');
+var connectLivereload,
+    express = require('express');
 
 var app = express();
 var port = process.env.port || 3000;
 
 //connectLivereload() should be added first to work properly
-app.use( connectLivereload() );
+if (process.env.env === 'dev') {
+  connectLivereload = require('connect-livereload');
+  app.use( connectLivereload() );
+}
 
 app.use( '/',  express.static(__dirname + '/dist') );
 
