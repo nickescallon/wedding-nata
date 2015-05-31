@@ -1,6 +1,5 @@
 (function() {
   var elems = {
-    header: $('header').find('div.max-width'),
     body: $('body'),
     main: $('.container-main'),
     landing: $('#landing'),
@@ -25,9 +24,6 @@
     // landing page is always 1 window height
     var landingPageHeight = window.innerHeight - 50;
     elems.landing.height(landingPageHeight);
-
-    // centers the fixed header
-    elems.header.css('left', elems.main.offset().left);
   }
 
   elems.nav.ourWedding.on( 'click', scrollTo.bind(elems.content.ourWedding) );
