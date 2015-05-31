@@ -1,4 +1,4 @@
-(function() {
+$(document).ready(function() {
   var elems = {
     body: $('body'),
     main: $('.container-main'),
@@ -37,4 +37,4 @@
     elems.body.animate({scrollTop: targetTop}, 750);
   }
 
-})();
+});
