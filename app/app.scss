@@ -1,19 +1,29 @@
 $height-header: 50px;
+$color-accent: #113A3F;
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 html {
-  font-size: 10px;
-  color: #242429;
+  font-size: 14px;
+  font-family: 'Indie Flower', cursive;
+  color: $color-accent;
+  height: 100%;
+}
+
+body {
+  // need to make this image smaller...
+  background: url(../images/paper.jpg) center center fixed;
+  background-size: cover;
+}
+
+a {
+  color: white;
 }
 
 /*CONTAINERS*/
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  // max-width: 1000px;
-}
 
 .flex-col {
-  position:relative;
+  // position:relative;
   display: flex;
   flex-direction: column;
 }
@@ -98,38 +108,78 @@ html {
 }
 
 // less general styles
+////////////////////////////
 
 header {
   position: fixed;
   height: $height-header;
-  width: 100%;
-  background: black;
-  color: white;
-}
-
-.main {
-  position: absolute;
-  top: $height-header;
   left: 0;
   right: 0;
-  bottom: 0;
-  z-index: -1;
-  // background: red;
+  background: black;
+  color: white;
+  z-index: 999;
+  opacity: .7
+}
+
+.max-width {
+  max-width: 1000px;
+}
+
+.container-main {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-image {
+  position: relative;
+  font-size: 36px;
+
+  > .caption-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  > .caption-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  > .footer {
+    height: 50px;
+    padding: 5px;
+
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.container-content {
+  position: relative;
+  top: $height-header;
+  height: 100%;
 }
 
 .content {
+  position: relative;
   height: 300px;
   border: 1px solid black;
 }
 
-.landing {
-  background: url(../images/landing.jpg) no-repeat center center fixed;
-  // Load a mobile friendly img on a breakpoint
-  z-index: -2;
-  background-size: cover;
-  height: 2000px;
+#landing {
+  position: relative;
+
+  > .bottom-left {
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+  }
+
+  > .bottom-right {
+    position: absolute;
+    right: 2%;
+    bottom: 1%;
+  }
 }
-
-
-
-
