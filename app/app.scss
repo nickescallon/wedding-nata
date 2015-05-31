@@ -24,7 +24,7 @@ a {
 
 .flex-col {
   position:relative;
-  -webkit-display: flex;
+  display: -webkit-flex;
   -webkit-flex-direction: column;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ a {
 
 .flex-row {
   position:relative;
-  -webkit-display: flex;
+  display: -webkit-flex;
   -webkit-flex-direction: row;
   display: flex;
   flex-direction: row;
@@ -110,14 +110,14 @@ a {
 
 
 .v-center {
-  -webkit-display:flex;
+  display: -webkit-flex;
   -webkit-align-items: center;
   display:flex;
   align-items: center;
 }
 
 .h-center {
-  -webkit-display:flex;
+  display: -webkit-flex;
   -webkit-justify-content: center;
   display:flex;
   justify-content: center;
