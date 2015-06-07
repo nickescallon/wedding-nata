@@ -5,15 +5,23 @@ $color-accent: #113A3F;
 
 html {
   font-size: 14px;
-  font-family: 'Indie Flower', cursive;
-  color: $color-accent;
+  // font-family: 'Indie Flower', cursive;
+  // color: $color-accent;
   height: 100%;
 }
 
-body {
-  // need to make this image smaller...
-  background: url(../images/paper.jpg) center center fixed;
-  background-size: cover;
+body {}
+
+// need the following for the background image so that it
+// works (fixed cover) for browser and mobile
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
 a {
@@ -71,8 +79,12 @@ a {
 .align-baseline {align-items: baseline;}
 
 /*ALIGN SELF*/
-.self-start { align-self: flex-start;}
-.self-end { align-self: flex-end;}
+.self-start {align-self: flex-start;}
+.self-end {align-self: flex-end;}
+.self-center {
+  -webkit-align-self: center;
+  align-self: center;
+}
 
 /*BEHAVIOR*/
 .y-scroll {overflow-y: scroll;}
@@ -138,7 +150,7 @@ header {
   background: black;
   color: white;
   z-index: 999;
-  opacity: .7
+  // opacity: .7
 }
 
 nav {
@@ -154,6 +166,8 @@ nav {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Indie Flower', cursive;
+  color: $color-accent;
 }
 
 .container-image {
@@ -189,8 +203,20 @@ nav {
 
 .content {
   position: relative;
-  height: 300px;
-  border: 1px solid black;
+  // height: 300px;
+  // border: 1px solid black;
+  max-width: 800px;
+  padding: 25px 25px;
+
+  h1 {
+    margin: 20px;
+    text-decoration: underline;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
 }
 
 #landing {
@@ -208,4 +234,44 @@ nav {
     right: 2%;
     bottom: 1%;
   }
+}
+
+// bootstrap overrides
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+}
+
+.navbar-default {
+
+  background-color: transparent;
+  border: none;
+
+  .navbar-nav > li > a {
+    color: white;
+  }
+
+  .navbar-collapse {
+    background-color: black;
+    border: none;
+  }
+
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    opacity: .5;
+  }
+
+  .navbar-nav > li > a:hover {
+    color: #5e5e5e;
+  }
+
+  .navbar-nav > li > a:focus {
+    color: white;
+  }
+
 }

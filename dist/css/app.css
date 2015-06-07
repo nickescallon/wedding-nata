@@ -1,13 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 html {
   font-size: 14px;
-  font-family: 'Indie Flower', cursive;
-  color: #113A3F;
   height: 100%; }
 
-body {
-  background: url(../images/paper.jpg) center center fixed;
-  background-size: cover; }
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%; }
 
 a {
   color: white; }
@@ -82,6 +84,10 @@ a {
 
 .self-end {
   align-self: flex-end; }
+
+.self-center {
+  -webkit-align-self: center;
+  align-self: center; }
 
 /*BEHAVIOR*/
 .y-scroll {
@@ -172,8 +178,7 @@ header {
   right: 0;
   background: black;
   color: white;
-  z-index: 999;
-  opacity: .7; }
+  z-index: 999; }
 
 nav {
   width: 100%;
@@ -185,7 +190,9 @@ nav {
 .container-main {
   height: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  font-family: 'Indie Flower', cursive;
+  color: #113A3F; }
 
 .container-image {
   position: relative;
@@ -211,8 +218,13 @@ nav {
 
 .content {
   position: relative;
-  height: 300px;
-  border: 1px solid black; }
+  max-width: 800px;
+  padding: 25px 25px; }
+  .content h1 {
+    margin: 20px;
+    text-decoration: underline; }
+  .content h1, .content h2, .content h3 {
+    text-align: center; }
 
 #landing {
   position: relative;
@@ -225,3 +237,26 @@ nav {
     position: absolute;
     right: 2%;
     bottom: 1%; }
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+  .navbar .navbar-collapse {
+    text-align: center; } }
+
+.navbar-default {
+  background-color: transparent;
+  border: none; }
+  .navbar-default .navbar-nav > li > a {
+    color: white; }
+  .navbar-default .navbar-collapse {
+    background-color: black;
+    border: none; }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    opacity: .5; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #5e5e5e; }
+  .navbar-default .navbar-nav > li > a:focus {
+    color: white; }
