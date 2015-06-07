@@ -2,8 +2,8 @@
 <meta charset="UTF8">
 <html>
   <head>
-    <!-- <meta name="viewport" content="width=400,initial-scale = 1.0,maximum-scale = 1.0"/> -->
-    <meta name="viewport" content="width=400, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width"/>
+    <!-- <meta name="viewport" content="width=400, initial-scale=1"> -->
     <!-- <meta name='viewport' content='user-scalable=no' /> -->
     <link rel="stylesheet" type="text/css" href="/css/vendor.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
@@ -81,28 +81,36 @@
           </div>
         </div>
 
-        <div id="wedding-day" class="content flex-col self-center h-center v-center">
-          <div class="item-1 h-center">
+        <!-- MAKE THIS MORE RESPONSIVE SO MOBILE WORKS -->
+        <div id="wedding-day" class="content flex-col self-center h-center v-center width-full">
+          <div class="h-center">
             <h1>Wedding Day</h1>
           </div>
 
-          <div class="item-1 h-center">
-            <h2><strong>Date: </strong>Saturday, October 10th 2015</h2>
+          <div class="flex-row flex-wrap width-full">
+              <h2 class="item-1 justify-start"><strong>Date:</strong></h2>
+              <h2 class="item-1 justify-center">Saturday, October 10th 2015</h2>
           </div>
 
-          <div class="item-1 h-center">
-            <h2><strong>Ceremony Location & Time: </strong>TBA</h2>
+          <div class="flex-row flex-wrap width-full">
+              <h2 class="item-1 justify-start"><strong>Ceremony Location & Time:</strong></h2>
+              <h2 class="item-1 justify-center">TBA</h2>
           </div>
 
-          <div class="item-1 h-center">
-            <h2><strong>Reception: </strong> Following Ceremony at the InterContinental Hotel Boston</h2>
+          <div class="flex-row flex-wrap width-full">
+              <h2 class="item-1 justify-start"><strong>Reception:</strong></h2>
+              <h2 class="item-1 justify-center">Following Ceremony at the InterContinental Hotel Boston</h2>
           </div>
 
-          <div class="item-1 h-center">
-            <h2><strong>Suggested Attire: </strong>Black Tie</h2>
+          <div class="flex-row flex-wrap width-full">
+              <h2 class="item-1 justify-start"><strong>Suggested Attire:</strong></h2>
+              <h2 class="item-1 justify-center">Black Tie</h2>
           </div>
 
-          <div class="flex-row width-full">
+
+
+        </div>
+        <!-- <div class="flex-row width-full">
             <div class="item-1 h-center">
               <div class="flex-col">
                 <h3>Men:</h3>
@@ -118,14 +126,60 @@
             </div>
           </div>
 
+          <div class="h-center">
+            <p>No Children Event</p>
+          </div> -->
+
+
+        <div id="accommodations" class="content flex-col self-center h-center v-center">
+          <div class="item-1 h-center">
+            <h1>Accommodations</h1>
+          </div>
+
+          <div class="item-1 h-center">
+            <div>
+              <h3>Nearby Hotels:</h3>
+              <!-- MAKE THIS SMALLER WHEN SCREEN IS SMALL -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5896.669978929555!2d-71.05218608355874!3d42.356699635770376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotels+near+InterContinental+Boston%2C+Boston%2C+MA!5e0!3m2!1sen!2sus!4v1433699696847" width="400" height="300" frameborder="0" style="border: 10px solid white"></iframe>
+            </div>
+          </div>
+
+          <div class="item-1 h-center">
+            <div>
+              <h2>Hotel Booking Sites:</h2>
+              <div class="flex-col">
+                <h3><a target="_blank" href="http://www.hotels.com">hotels.com</a></h3>
+                <h3><a target="_blank" href="http://www.cheapoair.com">cheaopair.com</a></h3>
+                <h3><a target="_blank" href="http://www.cheapair.com">cheapair.com</a></h3>
+              </div>
+            </div>
+          </div>
+
         </div>
 
+        <div id="getting-around" class="content flex-col self-center h-center v-center">
+          <div class="h-center">
+            <h1>Getting Around Boston</h1>
+          </div>
+        </div>
 
+        <div id="photos" class="content flex-col self-center h-center v-center">
+          <div class="h-center">
+            <div>
+              <h1>Photos</h1>
+              <h2>Coming Soon...</h2>
+            </div>
+          </div>
+        </div>
 
-        <div id="accommodations" class="content flex-col self-center h-center v-center">Accommodations</div>
-        <div id="getting-around" class="content flex-col self-center h-center v-center">Getting Around Bosotn</div>
-        <div id="photos" class="content flex-col self-center h-center v-center">Photos</div>
-        <div id="registry" class="content flex-col self-center h-center v-center">Registry</div>
+        <div id="registry" class="content flex-col self-center h-center v-center">
+          <div class="h-center">
+            <div>
+              <h1>Registry</h1>
+              <h2>Coming Soon...</h2>
+            </div>
+          </div>
+        </div>
 
 
       </div>

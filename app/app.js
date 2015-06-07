@@ -23,18 +23,22 @@ $(document).ready(function() {
   };
 
   var width, height;
-  setTimeout(resize, 300); // mobile
-  $(window).on('resize orientationChange', resize);
+  // setTimeout(resize, 300); // mobile
+  resize();
+
+  $(window).on('load', resize);
+  $(window).on('resize orientationChange', function() {
+    if($(window).width() != width && $(window).height() != height){
+     resize();
+    }
+  });
 
   function resize() {
-    if($(window).width() != width && $(window).height() != height){
-      // landing page is always 1 window height
-      width = $(window).width(), height = $(window).height();
-      var landingPageHeight = window.innerHeight - 50;
-      elems.landing.height(landingPageHeight);
-      $('.content').css('min-height', landingPageHeight);
-
-    }
+    // landing page is always 1 window height
+    width = $(window).width(), height = $(window).height();
+    var landingPageHeight = height - 50;
+    elems.landing.height(landingPageHeight);
+    $('.content').css('min-height', landingPageHeight);
   }
 
   elems.nav.itAllStarted.on( 'click', scrollTo.bind(elems.content.itAllStarted) );

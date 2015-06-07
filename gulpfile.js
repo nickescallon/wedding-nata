@@ -40,10 +40,10 @@ gulp.task('vendorJs', function() {
 
   gulp.src(mainBowerFiles())
   .pipe(jsFilter)
-  .pipe(sourcemaps.init())
+  //.pipe(sourcemaps.init())
   .pipe(concat('vendor.js'))
   .pipe(uglify())
-  .pipe(sourcemaps.write("."))
+  //.pipe(sourcemaps.write("."))
   .pipe(gulp.dest(destinations.js))
   .pipe(livereload());
 });
@@ -51,11 +51,11 @@ gulp.task('vendorJs', function() {
 // concat and minify app js
 gulp.task('appJs', function() {
   gulp.src(sources.app.js)
-  .pipe(sourcemaps.init())
+  //.pipe(sourcemaps.init())
   .pipe(concat('app.js'))
   // .pipe(ngAnnotate())
-  .pipe(uglify({compress: {sequences: false, join_vars: false}})) // do we need these extra params?
-  .pipe(sourcemaps.write("."))
+  .pipe(uglify()) // do we need these extra params?
+  //.pipe(sourcemaps.write("."))
   .pipe(gulp.dest(destinations.js))
   .pipe(livereload());
 });

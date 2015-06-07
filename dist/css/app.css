@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 html {
   font-size: 14px;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 #bg {
   position: fixed;
@@ -48,12 +49,18 @@ a {
 
 /*JUSTIFY CHILDREN*/
 .justify-start {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start; }
 
 .justify-center {
   justify-content: center; }
 
 .justify-end {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end; }
 
 .justify-around {
@@ -88,6 +95,10 @@ a {
 .self-center {
   -webkit-align-self: center;
   align-self: center; }
+
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 /*BEHAVIOR*/
 .y-scroll {
@@ -181,17 +192,17 @@ header {
   z-index: 999; }
 
 nav {
-  width: 100%;
-  min-width: 400px; }
+  width: 100%; }
 
 .max-width {
   max-width: 1000px; }
 
 .container-main {
+  position: relative;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower', Helvetica, Arial, sans-serif;
   color: #113A3F; }
 
 .container-image {
@@ -223,8 +234,11 @@ nav {
   .content h1 {
     margin: 20px;
     text-decoration: underline; }
-  .content h1, .content h2, .content h3 {
+  .content h1, .content h3 {
     text-align: center; }
+  .content a {
+    color: #113A3F;
+    text-decoration: underline; }
 
 #landing {
   position: relative;
@@ -237,6 +251,9 @@ nav {
     position: absolute;
     right: 2%;
     bottom: 1%; }
+
+#wedding-day .item-1 {
+  min-width: 300px; }
 
 @media (min-width: 768px) {
   .navbar .navbar-nav {

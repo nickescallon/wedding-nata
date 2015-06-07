@@ -5,9 +5,10 @@ $color-accent: #113A3F;
 
 html {
   font-size: 14px;
-  // font-family: 'Indie Flower', cursive;
+  // font-family: 'Indie Flower', Helvetica, Arial, sans-serif;
   // color: $color-accent;
   height: 100%;
+  width:100%;
 }
 
 body {}
@@ -65,9 +66,19 @@ a {
 }
 
 /*JUSTIFY CHILDREN*/
-.justify-start {justify-content: flex-start;}
+.justify-start {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
 .justify-center {justify-content: center;}
-.justify-end {justify-content: flex-end;}
+.justify-end {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
 .justify-around {justify-content: space-around;}
 .justify-between {justify-content: space-between;}
 
@@ -84,6 +95,11 @@ a {
 .self-center {
   -webkit-align-self: center;
   align-self: center;
+}
+
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /*BEHAVIOR*/
@@ -155,7 +171,7 @@ header {
 
 nav {
   width: 100%;
-  min-width: 400px;
+  // min-width: 400px;
 }
 
 .max-width {
@@ -163,10 +179,11 @@ nav {
 }
 
 .container-main {
+  position:relative;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Indie Flower', Helvetica, Arial, sans-serif;;
   color: $color-accent;
 }
 
@@ -207,14 +224,20 @@ nav {
   // border: 1px solid black;
   max-width: 800px;
   padding: 25px 25px;
+  // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   h1 {
     margin: 20px;
     text-decoration: underline;
   }
 
-  h1, h2, h3 {
+  h1, h3 {
     text-align: center;
+  }
+
+  a {
+    color: $color-accent;
+    text-decoration: underline;
   }
 
 }
@@ -233,6 +256,12 @@ nav {
     position: absolute;
     right: 2%;
     bottom: 1%;
+  }
+}
+
+#wedding-day {
+  .item-1 {
+    min-width: 300px;
   }
 }
 
