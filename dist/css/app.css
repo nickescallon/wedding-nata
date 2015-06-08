@@ -207,7 +207,11 @@ nav {
 
 .container-image {
   position: relative;
-  font-size: 36px; }
+  font-size: 36px;
+  width: 40%;
+  min-width: 250px; }
+  .container-image > img {
+    width: 100%; }
   .container-image > .caption-left {
     position: absolute;
     left: 0;
@@ -219,7 +223,7 @@ nav {
   .container-image > .footer {
     height: 50px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center; }
 
 .container-content {
@@ -252,8 +256,11 @@ nav {
     right: 2%;
     bottom: 1%; }
 
+#wedding-day .flex-row {
+  max-width: 100%; }
 #wedding-day .item-1 {
-  min-width: 300px; }
+  flex: 1 0 500px;
+  -webkit-flex: 1 0 300px; }
 
 @media (min-width: 768px) {
   .navbar .navbar-nav {
