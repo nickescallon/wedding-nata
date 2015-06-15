@@ -181,7 +181,6 @@ nav {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Indie Flower', Helvetica, Arial, sans-serif;;
   color: $color-accent;
 }
 
@@ -239,6 +238,10 @@ nav {
     text-align: center;
   }
 
+  h2 {
+    font-size: 25px;
+  }
+
   a {
     color: $color-accent;
     text-decoration: underline;
@@ -249,6 +252,7 @@ nav {
 #landing {
   position: relative;
   height: 5000px;
+  font-family: 'Indie Flower', Helvetica, Arial, sans-serif;
 
   > .bottom-left {
     position: absolute;
@@ -263,13 +267,17 @@ nav {
   }
 }
 
-#wedding-day {
+#wedding-day, #accommodations {
   .flex-row {
     max-width: 100%;
   }
   .item-1 {
     flex: 1 0 500px;
     -webkit-flex: 1 0 300px;
+  }
+
+  a {
+    color: blue;
   }
 }
 

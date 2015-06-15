@@ -202,7 +202,6 @@ nav {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Indie Flower', Helvetica, Arial, sans-serif;
   color: #113A3F; }
 
 .container-image {
@@ -240,13 +239,16 @@ nav {
     text-decoration: underline; }
   .content h1, .content h3 {
     text-align: center; }
+  .content h2 {
+    font-size: 25px; }
   .content a {
     color: #113A3F;
     text-decoration: underline; }
 
 #landing {
   position: relative;
-  height: 5000px; }
+  height: 5000px;
+  font-family: 'Indie Flower', Helvetica, Arial, sans-serif; }
   #landing > .bottom-left {
     position: absolute;
     left: 2%;
@@ -256,11 +258,13 @@ nav {
     right: 2%;
     bottom: 1%; }
 
-#wedding-day .flex-row {
+#wedding-day .flex-row, #accommodations .flex-row {
   max-width: 100%; }
-#wedding-day .item-1 {
+#wedding-day .item-1, #accommodations .item-1 {
   flex: 1 0 500px;
   -webkit-flex: 1 0 300px; }
+#wedding-day a, #accommodations a {
+  color: blue; }
 
 .google-maps {
   position: relative;
