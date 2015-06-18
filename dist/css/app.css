@@ -1,8 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 html {
   font-size: 14px;
   height: 100%;
   width: 100%; }
+
+body {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
 
 #bg {
   position: fixed;
@@ -206,7 +208,7 @@ nav {
 
 .container-image {
   position: relative;
-  font-size: 36px;
+  font-size: 28px;
   width: 40%;
   min-width: 250px; }
   .container-image > img {
@@ -222,7 +224,7 @@ nav {
   .container-image > .footer {
     height: 50px;
     padding: 5px;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center; }
 
 .container-content {
@@ -247,8 +249,7 @@ nav {
 
 #landing {
   position: relative;
-  height: 5000px;
-  font-family: 'Indie Flower', Helvetica, Arial, sans-serif; }
+  height: 5000px; }
   #landing > .bottom-left {
     position: absolute;
     left: 2%;
@@ -264,7 +265,10 @@ nav {
   flex: 1 0 500px;
   -webkit-flex: 1 0 300px; }
 #wedding-day a, #accommodations a {
-  color: blue; }
+  color: blue;
+  font-size: 15px; }
+#wedding-day p, #accommodations p {
+  font-size: 20px; }
 
 .google-maps {
   position: relative;
@@ -284,7 +288,11 @@ nav {
     float: none;
     vertical-align: top; }
   .navbar .navbar-collapse {
-    text-align: center; } }
+    text-align: center; }
+  .container-image {
+    font-size: 36px; }
+    .container-image .footer {
+      font-size: 18px; } }
 
 .navbar-default {
   background-color: transparent;

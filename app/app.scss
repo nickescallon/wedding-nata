@@ -1,17 +1,15 @@
 $height-header: 50px;
 $color-accent: #113A3F;
 
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
-
 html {
   font-size: 14px;
-  // font-family: 'Indie Flower', Helvetica, Arial, sans-serif;
-  // color: $color-accent;
   height: 100%;
   width:100%;
 }
 
-body {}
+body {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
 
 // need the following for the background image so that it
 // works (fixed cover) for browser and mobile
@@ -186,7 +184,7 @@ nav {
 
 .container-image {
   position: relative;
-  font-size: 36px;
+  font-size: 28px;
   width: 40%;
   min-width: 250px;
 
@@ -210,7 +208,7 @@ nav {
     height: 50px;
     padding: 5px;
 
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
   }
 }
@@ -252,7 +250,6 @@ nav {
 #landing {
   position: relative;
   height: 5000px;
-  font-family: 'Indie Flower', Helvetica, Arial, sans-serif;
 
   > .bottom-left {
     position: absolute;
@@ -278,6 +275,11 @@ nav {
 
   a {
     color: blue;
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 20px;
   }
 }
 
@@ -309,6 +311,14 @@ nav {
   }
   .navbar .navbar-collapse {
     text-align: center;
+  }
+
+  .container-image {
+    font-size: 36px;
+
+    .footer {
+      font-size: 18px;
+    }
   }
 }
 
