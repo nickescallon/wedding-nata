@@ -9,6 +9,7 @@ $(document).ready(function() {
       accommodations: $('#accommodations'),
       gettingAround: $('#getting-around'),
       photos: $('#photos'),
+      activities: $('#activities'),
       registry: $('#registry')
     },
     nav: {
@@ -18,6 +19,7 @@ $(document).ready(function() {
       gettingAround: $('#link-getting-around'),
       photos: $('#link-photos'),
       registry: $('#link-registry'),
+      activities: $('#link-activities'),
       collapsed: $('#navbar-collapsed')
     }
   };
@@ -45,6 +47,7 @@ $(document).ready(function() {
   elems.nav.weddingDay.on( 'click', scrollTo.bind(elems.content.weddingDay) );
   elems.nav.accommodations.on( 'click', scrollTo.bind(elems.content.accommodations) );
   elems.nav.gettingAround.on( 'click', scrollTo.bind(elems.content.gettingAround) );
+  elems.nav.activities.on( 'click', scrollTo.bind(elems.content.activities) );
   elems.nav.photos.on( 'click', scrollTo.bind(elems.content.photos) );
   elems.nav.registry.on( 'click', scrollTo.bind(elems.content.registry) );
 

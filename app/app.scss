@@ -70,7 +70,12 @@ a {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
-.justify-center {justify-content: center;}
+.justify-center {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 .justify-end {
   display: -webkit-flex;
   display: flex;
@@ -143,6 +148,7 @@ a {
 }
 
 .h-center {
+  // text-align: center;
   display: -webkit-flex;
   -webkit-justify-content: center;
   display:flex;
@@ -151,6 +157,10 @@ a {
 
 .wrap {
   word-wrap: break-word;
+}
+
+.justify {
+  text-align: justify;
 }
 
 // less general styles
@@ -229,7 +239,7 @@ nav {
 
   h1 {
     margin: 20px;
-    text-decoration: underline;
+    //text-decoration: underline;
   }
 
   h1, h3 {
@@ -243,6 +253,11 @@ nav {
   a {
     color: $color-accent;
     text-decoration: underline;
+  }
+
+  hr {
+    border-color: #242429;
+    width: 100%;
   }
 
 }
@@ -268,12 +283,24 @@ nav {
   }
 }
 
+#it-all-started {
+  small {
+    color: #242429;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    border: 8px solid white;
+  }
+}
 #wedding-day, #accommodations {
   .flex-row {
     max-width: 100%;
   }
   .item-1 {
-    flex: 1 0 500px;
+    flex: 1 0 300px;
     -webkit-flex: 1 0 300px;
   }
 
