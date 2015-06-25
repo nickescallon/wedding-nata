@@ -240,10 +240,15 @@ nav {
 
 .content {
   position: relative;
+  width: 100%;
   max-width: 800px;
   padding: 25px 25px; }
+  .content .heading {
+    width: 100%;
+    border-top: 1px solid #242429;
+    border-bottom: 1px solid #242429; }
   .content h1 {
-    margin: 20px; }
+    margin: 10px; }
   .content h1, .content h3 {
     text-align: center; }
   .content h2 {
@@ -280,8 +285,8 @@ nav {
 #wedding-day .flex-row, #accommodations .flex-row {
   max-width: 100%; }
 #wedding-day .item-1, #accommodations .item-1 {
-  flex: 1 0 300px;
-  -webkit-flex: 1 0 300px; }
+  flex: 1 0 200px;
+  -webkit-flex: 1 0 200px; }
 #wedding-day a, #accommodations a {
   color: blue;
   font-size: 15px; }
@@ -299,6 +304,12 @@ nav {
     left: 0;
     width: 100%;
     height: 100%; }
+
+#carousel {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 600px;
+  height: 100%; }
 
 @media (min-width: 768px) {
   .navbar .navbar-nav {

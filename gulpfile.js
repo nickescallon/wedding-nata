@@ -82,6 +82,14 @@ gulp.task('appStyles', function() {
     .pipe(livereload());
 });
 
+/* FONTS */
+gulp.task('fonts', function() {
+  return gulp.src(mainBowerFiles(['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff', '**/*.woff2']) )
+    .pipe( flatten() )
+    .pipe( gulp.dest(destinations.fonts) )
+    .pipe( livereload() );
+});
+
 /* HTML */
 
 // create angular templateCache
@@ -122,6 +130,7 @@ gulp.task('build', [
   'vendorStyles',
   'appStyles',
   'images',
+  'fonts',
   'index'
 ]);
 
@@ -133,7 +142,7 @@ gulp.task('watch', function() {
   gulp.watch(sources.images, ['images']);
   gulp.watch(sources.index, ['index']);
   gulp.watch(sources.templates, ['templates']);
-  gulp.watch('./bower.json', ['vendorJs', 'vendorStyles']);
+  gulp.watch('./bower.json', ['vendorJs', 'vendorStyles', 'fonts']);
 });
 
 //default
