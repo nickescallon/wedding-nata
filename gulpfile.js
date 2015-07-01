@@ -19,9 +19,9 @@ var sources = {
     js: ['./app/**/*.js'],
     sass: ['./app/**/*.scss']
   },
-  images: ['./app/img/**/*.*'],
+  images: ['./img/**/*.*'],
   fonts: ['./assets/fonts/**/*.*'],
-  index: ['./app/index.html'],
+  index: ['./index.html'],
   templates: ['./app/**/*.html', '!./app/index.html']
 };
 var destinations = {
@@ -36,14 +36,20 @@ var destinations = {
 
 // concat and minify vendor js
 gulp.task('vendorJs', function() {
-  var jsFilter = gulpFilter('*.js');
 
-  gulp.src(mainBowerFiles())
-  .pipe(jsFilter)
-  //.pipe(sourcemaps.init())
+  gulp.src([
+    './js/jquery.js',
+    './js/jquery.fittext.js',
+    './js/jquery.easing.min.js',
+    './js/wow.min.js',
+    './js/bootstrap.js',
+    './js/classie.js',
+    // './js/cbpAnimatedHeader.js',
+    // './js/classie.js',
+    './js/creative.js',
+  ])
   .pipe(concat('vendor.js'))
   .pipe(uglify())
-  //.pipe(sourcemaps.write("."))
   .pipe(gulp.dest(destinations.js))
   .pipe(livereload());
 });
@@ -63,10 +69,13 @@ gulp.task('appJs', function() {
 /* STYLES */
 
 gulp.task('vendorStyles', function() {
-  var cssFilter = gulpFilter('*.css');
 
-  gulp.src(mainBowerFiles())
-  .pipe(cssFilter)
+  gulp.src([
+    './css/bootstrap.min.css',
+    './font-awesome/css/font-awesome.min.css',
+    './css/animate.min.css',
+    './css/creative.css'
+  ])
   .pipe(concat('vendor.css'))
   .pipe(gulp.dest(destinations.css));
 
@@ -84,25 +93,20 @@ gulp.task('appStyles', function() {
 
 /* FONTS */
 gulp.task('fonts', function() {
-  return gulp.src(mainBowerFiles(['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff', '**/*.woff2']) )
+  return gulp.src([
+      './font-awesome/fonts/fontawesome-webfont.eot',
+      './font-awesome/fonts/fontawesome-webfont.svg',
+      './font-awesome/fonts/fontawesome-webfont.ttf',
+      './font-awesome/fonts/fontawesome-webfont.woff',
+      './font-awesome/fonts/fontawesome-webfont.woff2',
+      './font-awesome/fonts/Fontawesome.otf'
+    ])
     .pipe( flatten() )
     .pipe( gulp.dest(destinations.fonts) )
     .pipe( livereload() );
 });
 
 /* HTML */
-
-// create angular templateCache
-gulp.task('templates', function() {
-  gulp.src(sources.templates)
-  .pipe(flatten())
-  .pipe(ngHtml2Js({
-    moduleName: 'myApp' //rename
-  }))
-  .pipe(concat('template-cache.js'))
-  .pipe(gulp.dest(destinations.js))
-  .pipe(livereload());
-});
 
 /* COPY */
 
@@ -126,7 +130,6 @@ gulp.task('index', function() {
 gulp.task('build', [
   'vendorJs',
   'appJs',
-  'templates',
   'vendorStyles',
   'appStyles',
   'images',
@@ -141,7 +144,6 @@ gulp.task('watch', function() {
   gulp.watch(sources.app.sass, ['appStyles']);
   gulp.watch(sources.images, ['images']);
   gulp.watch(sources.index, ['index']);
-  gulp.watch(sources.templates, ['templates']);
   gulp.watch('./bower.json', ['vendorJs', 'vendorStyles', 'fonts']);
 });
 
