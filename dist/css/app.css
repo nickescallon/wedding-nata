@@ -309,7 +309,7 @@ nav {
   margin-top: 25px;
   width: 100%;
   max-width: 600px;
-  height: 100%; }
+  border: 8px solid white; }
 
 @media (min-width: 768px) {
   .navbar .navbar-nav {
