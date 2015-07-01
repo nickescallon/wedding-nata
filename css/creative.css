@@ -121,7 +121,7 @@ aside {
     background-color: transparent;
 }
 
-@media(min-width:768px) {
+@media(min-width:1000px) {
     .navbar-default {
         /*border-color: rgba(255,255,255,.3);*/
         border-color: #242429;
@@ -483,4 +483,15 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+.header-image {
+    margin:25px auto;
+    width: 280px;
+}
+
+@media(min-width:768px) {
+    .header-image {
+        width: 40%;
+    }
 }
